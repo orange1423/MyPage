@@ -146,8 +146,8 @@
         window.onload = function () {
 
             syncField("client_id");
-            syncField("redirect_uri",  window.location.protocol + "//" + window.location.host + window.location.pathname);
-            document.querySelector("#location").textContent = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            syncField("redirect_uri",  "https://pages.icedeer.net/tools/microsoft-graph-api-auth");
+            document.querySelector("#location").textContent = "https://pages.icedeer.net/tools/microsoft-graph-api-auth";
 
 
             const params = (new URL(document.location)).searchParams;

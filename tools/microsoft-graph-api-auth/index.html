@@ -12,9 +12,8 @@
         <div class="nav-wrapper">
             <a href="#" class="brand-logo center">Microsoft Graph API Auth</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="..">More tools</a></li>
-                <li><a href="https://idx0.dev">My blog</a></li>
-                <li><a href="https://github.com/heymind/heymind.github.io/blob/master/tools/microsoft-graph-api-auth.html">Source Code</a></li>
+                <li><a href="https://xn--i8sr36a.wang/">橘子的小站</a></li>
+                <li><a href="https://github.com/heymind/heymind.github.io/blob/master/tools/microsoft-graph-api-auth.html">源代码</a></li>
             </ul>
         </div>
     </nav>
@@ -23,23 +22,21 @@
 
         <div class="card">
             <div class="card-content">
-                <span class="card-title">Prerequisite</span>
+                <span class="card-title">准备工作</span>
                 <ol>
                     <li>
-                        <p>Open <a
-                                href="https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade">https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade</a>
-                            to register a new app.</p>
-                        <p>This tool requires that the <code>redirect_uri</code> = <code><span
-                                    id="location"></span></code></p>
+                        <p>打开 <a
+                                href="https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade">Azure 应用注册</a>
+                            注册一个新应用</p>
+                        <p>需要将 <code>redirect_uri</code> 填写为 <code>https://pages.icedeer.net/tools/microsoft-graph-api-auth</span></code></p>
                     </li>
                     <li>
-                        <p>Switch to <code>Certificates &amp; secrets</code> tab, create a <code>client secret</code> ,
-                            copy
-                            and paste it to the input box below.</p>
+                        <p>切换到 <code>证书和密码</code> 选项卡， 创建新的 <code>客户端密码</code> ，
+                            把它粘贴到下面的输入框中。</p>
                     </li>
                     <li>
-                        <p>Switch to <code>API permissions</code> tab, add permissions you need.</p>
-                        <p>For OneDrive Index purpose, select following permssions: <code>offline_access</code>,
+                        <p>切换到 <code>API 权限</code> 选项卡， 添加你需要的权限。</p>
+                        <p>对于 OneDrive Index ， 需要以下权限： <code>offline_access</code>,
                             <code>Files.Read</code>, <code>Files.Read.All</code> .</p>
                         <p>&nbsp;</p>
                     </li>
@@ -50,7 +47,7 @@
 
         <form class="card" action="https://login.microsoftonline.com/common/oauth2/v2.0/authorize" method="GET">
             <div class="card-content">
-                <span class="card-title">4. Authorize for code</span>
+                <span class="card-title">登录并获取 Code</span>
                 <div class="input-field">
                     <input placeholder="client_id" name="client_id" type="text">
                     <label for="client_id">Client ID</label>
@@ -73,7 +70,7 @@
 
         <form class="card" action="https://login.microsoftonline.com/common/oauth2/v2.0/token" method="POST">
             <div class="card-content">
-                <span class="card-title">5. Exchange Access Token</span>
+                <span class="card-title">获取 Access Token</span>
                 <div class="input-field">
                     <input placeholder="client_id" name="client_id" type="text">
                     <label for="client_id">Client ID</label>
@@ -100,7 +97,7 @@
 
         <form class="card" action="https://login.microsoftonline.com/common/oauth2/v2.0/token" method="POST">
             <div class="card-content">
-                <span class="card-title">Refresh Token</span>
+                <span class="card-title">刷新 Token</span>
                 <div class="input-field">
                     <input placeholder="client_id" name="client_id" type="text">
                     <label for="client_id">Client ID</label>

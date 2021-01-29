@@ -1,5 +1,5 @@
 // 注意：live2d_path 参数应使用绝对路径
-const live2d_path = "https://pages.xn--i8sr36a.wang/tools/live2d-widget/";
+const live2d_path = "https://cdn.jsdelivr.net/gh/orange1423/Mypage@master/tools/live2d-widget/";
 //const live2d_path = "./";
 
 // 封装异步加载资源的方法
@@ -34,7 +34,7 @@ if (screen.width >= 768) {
 		initWidget({
 			waifuPath: live2d_path + "waifu-tips.json",
 			//apiPath: "https://live2d.fghrsh.net/api/",
-			cdnPath: "https://pages.xn--i8sr36a.wang/tools/live2d_api/"
+			cdnPath: "https://cdn.jsdelivr.net/gh/orange1423/Mypage@master/tools/live2d_api/"
 		});
 	});
 }
@@ -42,4 +42,4 @@ if (screen.width >= 768) {
 // API 后端可自行搭建，参考 https://github.com/fghrsh/live2d_api
 // 初始化看板娘会自动加载指定目录下的 waifu-tips.json
 
-console.log("咕咕咕！");
+console.log("咕咕咕！看板娘已经加载啦！");
